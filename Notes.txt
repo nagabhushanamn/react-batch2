@@ -1,0 +1,121 @@
+
+
+
+
+-----------------------------------------------------------
+Lab setup
+-------------
+
+1. Node.js runtime : https://nodejs.org/en/
+2. Editor          : https://code.visualstudio.com/
+
+Extenstions
+    1. vs-code icons
+    2. react-js code snippets
+
+-----------------------------------------------------------
+
+
+    http://crockford.com/
+
+-----------------------------------------------------------
+
+
+-----------------------------------------------------------
+.js-intro
+-----------------------------------------------------------
+
+=> client-side language for web-pages in browser-envi
++
+=> server-side language on Node.js(javascript runtime envi)
+
+-------------------------------------------------------------
+.js-features
+-----------------------------------------------------------
+
+- dynamicly-typed
+- FP + OOP
+
+- All IO operations are non-blocking by default
+- single-threaded process, still we can execute concurrent actions due non-blocking IO
+
+-------------------------------------------------------------
+
+.js-language based on 'ECMAScript spec'
+
+latest version : ES6/ES7
+
+-------------------------------------------------------------
+
+How to run .js-program ?
+
+    => using .js-runtime/engine
+
+brower-envi
+
+    a. chrome  ==> v8(c++)
+    b. firefox ==> rhino/spider ( java )
+    c. IE/Edge ==> chakra
+    d. safari  ==> nitro
+    ...
+
+other envi
+
+    a. Node.js ==> v8
+    b. JVM     ==> rhino / nashorn
+    ..
+
+-------------------------------------------------------------
+Ref: https://kangax.github.io/compat-table/es6/
+-------------------------------------------------------------
+
+-------------------------------------------------------------
+JS topics
+-------------------------------------------------------------
+
+ level-1:
+    - data-types
+    - scopes
+    - FP + OOP
+    - 'this' keyword
+
+ level-2
+    - new-syntax ( es6 & es7)
+    - new-apis
+    - modules
+
+ level-3
+    - concurrency model using event-loop
+    - browser apis
+    - Async apis
+
+ level-4
+    
+    - tools
+
+--------------------------------------------------------
+"Hello World"
+--------------------------------------------------------
+
+
+
+
+-------------------------------------------------------------
+
+dev web-server  ==> live-server script,
+                    runs on Node.js, it consider current  director project directory
+
+how to install ?
+
+> npm i live-server -g
+
+on project directory 
+
+> live-server --port=8080
+
+-------------------------------------------------------------
+
+
+
+
+
