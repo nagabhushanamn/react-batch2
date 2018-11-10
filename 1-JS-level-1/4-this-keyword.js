@@ -201,3 +201,23 @@ function sessionStart() {
 }
 sessionStart();
 
+
+//---------------------------------------------------------------------------
+
+
+const service = {
+    doTeach: function () {
+        // console.log(this)
+        console.log(this.name + " teaching .js");
+    }
+}
+const tnr2 = { name: 'Nag' }
+
+const teachBtn = document.getElementById('teachBtn')
+
+// teachBtn.addEventListener('click', function () {
+//     console.log(this)
+//     service.doTeach.call(tnr2)
+// })
+
+teachBtn.addEventListener('click', service.doTeach.bind(tnr2))
