@@ -3,9 +3,7 @@
 
 /*
 
-    How to create function?
-
-    2 ways
+    How to create function? 2 ways
 
     1. function declaration
 
@@ -193,19 +191,21 @@ nums.sort(asc);
 //---------------------------------------------
 
 /* 
-function teach() {
-    console.log('teaching .js');
-    const learn = function () {
-        console.log('learning .js');
-    }
-    // learn();
-    console.log('teaching .js ends');
-    return learn;
-}
 
-const learnFunc=teach();
-learnFunc()
-learnFunc();
+    function teach() {
+        console.log('teaching .js');
+        const learn = function () {
+            console.log('learning .js');
+        }
+        // learn();
+        console.log('teaching .js ends');
+        return learn;
+    }
+
+    const learnFunc=teach();
+    learnFunc()
+    learnFunc();
+
  */
 
 
@@ -224,6 +224,7 @@ A function that does at least one of the following is a Higher Order Function.
 
 */
 
+/* 
 function beforeLog() {
     console.log('BEFORE: log');
 }
@@ -249,12 +250,11 @@ function logWrapper(f) {
 }
 
 const funcWithLog = logWrapper(f2);
-// funcWithLog();
+funcWithLog();
 
+ */
 
-
-
-
+ 
 //---------------------------------------------
 // Function 'closures'
 //---------------------------------------------
@@ -327,4 +327,3 @@ const counter = (function () {
 })()
 //---------------------------------------------
 
-//---------------------------------------------
