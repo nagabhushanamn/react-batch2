@@ -1,0 +1,88 @@
+
+
+
+
+-------------------------------------------------------
+JS module standard
+-------------------------------------------------------
+
+.js developement , without module-standards & module-loaders
+
+problems,
+
+        => global naming collisions
+        => loading dependency modules in order is manual
+
+
+
+soln:
+
+    => using third-party's module standards
+
+        a. AMD ( Async Module Definition ) spec
+                loader : Require.js  
+        b. UMD
+        c. commonJS   
+        ...
+
+
+
+-------------------------------------------------------
+commonJS module standard
+-------------------------------------------------------
+
+    => every .js file is module
+    => all var & functions are private to the module by default.
+    => to abstract/export any member(s), use 'module.exports' object
+    => to require/import any module, use 'require()' function
+    => group related modules into package with description file ( package.json )
+
+    imp-note: Node.js runtime already this standard as default-module standard
+
+
+
+-------------------------------------------------------
+
+
+NPM ( Node Package Manager ) 
+---------------------------------
+
+    - CLI TOOL
+    - part of Node.js runtime
+
+    why we need ?
+
+     -> to exchange( publish / install ) .js-packages with NPM-repository   
+
+-------------------------------------------------------
+
+
+Webpack TOOL
+---------------
+
+==> module bundler & Loader
+
+
+-------------------------------------------------------
+
+
+ECMAScript spec
+
+
+
+
+-------------------------------------------------------
+ES module standard , in ES6
+-------------------------------------------------------
+
+    => every .js file is module
+    => all var & functions are private to the module by default.
+    => to abstract/export any member(s), use 'export' keyword
+    => to require/import any module, use 'import' keyword
+    => group related modules into package with description file ( package.json )
+
+
+imp-note: neither browser nor Node.js impleted this standard
+
+
+

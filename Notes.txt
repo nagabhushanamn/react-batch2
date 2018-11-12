@@ -87,11 +87,11 @@ JS topics
  level-3
     - concurrency model using event-loop ( imp )
     - browser apis / HTML 5  apis
-    - Async apis
+    - Async apis  ( promise API , RxJS )
 
  level-4
     
-    - tools
+    - tools  ( NPM , Wepback , Linting)
 
 --------------------------------------------------------
 "Hello World"

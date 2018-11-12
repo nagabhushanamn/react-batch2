@@ -1,0 +1,40 @@
+
+
+
+
+.js lang
+------------
+
+- All IO operations are non-blocking by default
+- single-threaded process, still we can execute concurrent actions due non-blocking IO
+
+
+------------------------------------------------------------------
+
+
+browser e.g chrome
+
+    - Javascript runtime/engine ( v8 )   ==> EcmaScript spec
+
+        a. single-call-stack  ==> to execute functions
+        b. heap               ==> to hold objects
+
+    - web APIs  ( DOM , XHR , ...)       ==> w3c proposals
+
+    - Event/Callback-Queue    
+
+    - EventLoop
+
+---------------------------------------------------------------------
+
+Reference :
+
+ https://developer.mozilla.org/bm/docs/Web/JavaScript/EventLoop
+ http://latentflip.com/loupe/
+
+--------------------------------------------------------------------- 
+
+
+
+
+
