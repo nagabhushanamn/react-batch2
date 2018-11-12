@@ -81,12 +81,12 @@ JS topics
 
  level-2
     - new-syntax ( es6 & es7)
-    - new-apis
+    - new-apis 
     - modules
 
  level-3
-    - concurrency model using event-loop
-    - browser apis
+    - concurrency model using event-loop ( imp )
+    - browser apis / HTML 5  apis
     - Async apis
 
  level-4

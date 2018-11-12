@@ -215,6 +215,8 @@ const tnr2 = { name: 'Nag' }
 
 const teachBtn = document.getElementById('teachBtn')
 
+teachBtn.addEventListener('click',service.doTeach)
+
 // teachBtn.addEventListener('click', function () {
 //     console.log(this)
 //     service.doTeach.call(tnr2)
