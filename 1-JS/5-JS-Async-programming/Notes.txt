@@ -33,8 +33,27 @@ Reference :
  http://latentflip.com/loupe/
 
 --------------------------------------------------------------------- 
+summary ,
+
+on any event , event-handler always executes asyncronously
+
+----------------------------------------------------------------------
 
 
+
+Async APIs
+---------------
+
+  - Promise API
+  - RxJS
+
+ ----------------------------------------------------------------- 
+
+
+
+- Promise API
+
+    
 
 
 

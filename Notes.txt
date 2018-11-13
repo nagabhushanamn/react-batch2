@@ -115,7 +115,14 @@ on project directory
 
 -------------------------------------------------------------
 
+reference :
 
+    http://javascript.info/
+    http://exploringjs.com/
+    https://developer.mozilla.org/bm/docs/Web/JavaScript
+    http://latentflip.com/loupe
+
+--------------------------------------------------------------    
 
 
 

@@ -1,0 +1,119 @@
+
+
+
+
+
+component architecture
+--------------------------
+
+in web UI ,
+
+ what is component ?
+
+ independent UI fragement in web-page with single-responsibility
+
+ e.g
+
+    Box, Input,....
+
+
+
+is HTML based on component based arch ?  Yes
+
+
+
+HTML tag/element/component
+---------------------------
+
+==> dom-element is individual component
+
+
+==> every html-tag/element/component
+       is an instance of HTMLXXXElement class
+
+    e.g
+
+    <div></div>  instanceof 'HTMLDivElement' class
+
+    i.e
+
+    HTMLDivElement      ==> HTML-component-class
+    <div></div>         ==> HTML-component-instance
+
+    HTMLInputElement  ==> HTML-component-class
+    <input/>           ==> HTML-component-instance
+
+
+==> easy to nest multiple component(s) together without any complexity/pollution
+
+
+
+-----------------------------------------------------------
+
+    html-component-properties
+    --------------------------
+
+    - props/attributes   
+
+        e.g div
+                - id
+                - class
+        e.g input
+                - id
+                - type
+
+     ==> immutable-data given by parent-component to child component 
+         while instantiation/re-rendering
+         
+---------------------------------------------------------------------------
+
+    2 types of HTML components
+
+        - stateless
+        - statefull      
+
+
+    e.g input-element   ==> statefull HTML component
+
+        state : i.e 'value'
+
+            
+imp-note : when component's state changes,always will re-render
+
+ 
+---------------------------------------------------------------------------
+
+
+    in component based arch  ==> uni-directional data-flow
+
+    parent --> child : data/props will go down
+    child  --> parent : action/event will come up
+
+
+
+---------------------------------------------------------------------------
+
+
+by default HTML/actual-DOM, follows component architecture
+
+
+somtimes we need components like these   
+
+    - Product
+    - Review
+    - Login
+
+
+  to create this kind custom components, we use React.js Library
+
+
+---------------------------------------------------------------------------
+
+  Prasanna Muralidharan says, cts employee
+
+  =>each functionality within a web page can be separated in terms of individual components.
+
+
+
+
+---------------------------------------------------------------------------

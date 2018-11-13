@@ -1,0 +1,32 @@
+
+
+
+   react    vs  angular
+   ----------------------
+
+   simlarity
+
+   --> both  uses 'component-based-archtecture' to solve UI prob
+   --> uni-directional data-flow
+
+   differences
+   -------------
+
+    -> react is just UI lib
+        +
+        redux, react-routing  packages
+
+
+    -> NG is F.W , provived some ready modules  ( to manage form , routing , http , etc..)
+
+
+    -> react is senior
+    -> NG new baby
+
+    -> react is easy to learn , simple api
+    -> NG learning little heavy
+
+    -------------------------------------------------------
+
+
+    --------------------------------------------
