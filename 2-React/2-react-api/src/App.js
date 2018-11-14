@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Greeting from './components/Greeting'
+import Box from './components/Box';
+import Employee from './components/Employee';
+import Product from './components/Product';
+import A from './components/A';
+import CounterBox from './components/CounterBox';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +34,28 @@ class App extends Component {
         <hr />
         <h1>{title} - <span className="badge badge-dark">{tnr}</span></h1>
         <hr />
+        
+        <CounterBox />
+
+        <hr />
+        <A value={1000} />
+        <br />
+        <A value={2000} />
+        <hr />
+
+        <Box>
+          <Employee />
+          <Employee />
+          <Employee />
+        </Box>
+        <Box>
+          <Product />
+          <Product />
+          <Product />
+        </Box>
+        <hr />
+
+
         <button onClick={e => this.changeMessage(e, 'good morining')} className="btn btn-info"> GM </button>&nbsp;
         <button onClick={e => this.changeMessage(e, 'good noon')} className="btn btn-info"> GN </button>&nbsp;
         <button onClick={e => this.changeMessage(e, 'good eveining')} className="btn btn-info"> GE </button>&nbsp;
