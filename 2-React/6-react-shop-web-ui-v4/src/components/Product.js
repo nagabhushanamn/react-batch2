@@ -8,20 +8,38 @@ class Product extends Component {
         super(props);
         this.state = {
             tab: 1,
-            reviews: [
-                { stars: 5, author: 'who@email.com', body: 'sample-review-1' },
-                { stars: 1, author: 'who@email.com', body: 'sample-review-2' }
-            ]
+            reviews: []
         }
     }
     changeTab(tabIndex) {
-        this.setState({ tab: tabIndex })
+        this.setState({ tab: tabIndex }, () => {
+            if (tabIndex === 3) {
+                let id = this.props.product.id;
+                let api = `http://0.0.0.0:8080/api/products/${id}/reviews`
+                fetch(api)
+                    .then(response => response.json())
+                    .then(reviews => {
+                        reviews = reviews || []
+                        this.setState({ reviews })
+                    })
+            }
+        })
     }
     handleNewReview(review) {
-        //let { product } = this.props;
-        let { reviews } = this.state;
-        reviews = reviews.concat(review);
-        this.setState({ reviews });
+        let id = this.props.product.id;
+        let api = `http://0.0.0.0:8080/api/products/${id}/reviews`
+        fetch(api, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(review)
+        })
+            .then(response => response.json())
+            .then(reviesavedReview => {
+                let { reviews } = this.state;
+                reviews = reviews.concat(reviesavedReview);
+                this.setState({ reviews });
+            })
+
     }
 
     renderBuyBtn(product) {
@@ -67,7 +85,7 @@ class Product extends Component {
         return (
             <div className="row">
                 <div className="col-3 col-sm-3 col-md-3">
-                    <img src={product.imagePath} className="img-fluid" alt={product.name} />
+                    <img src={product.image} className="img-fluid" alt={product.name} />
                 </div>
                 <div className="col-9 col-sm-9 col-md-9">
                     <h5>{product.name}</h5>
@@ -76,13 +94,13 @@ class Product extends Component {
                     <hr />
                     <ul className="nav nav-tabs">
                         <li className="nav-item">
-                            <a className={`nav-link ${tab === 1 ? 'active' : ''}`} onClick={e => this.changeTab(1)} href="/#">Description</a>
+                            <a className={`nav-link ${tab === 1 ? 'active' : ''}`} onClick={e => this.changeTab(1)} href="#">Description</a>
                         </li>
                         <li className="nav-item">
-                            <a className={classNames('nav-link', { active: tab === 2 })} onClick={e => this.changeTab(2)} href="/#">Specification</a>
+                            <a className={classNames('nav-link', { active: tab === 2 })} onClick={e => this.changeTab(2)} href="#">Specification</a>
                         </li>
                         <li className="nav-item">
-                            <a className={classNames('nav-link', { active: tab === 3 })} onClick={e => this.changeTab(3)} href="/#">Reviews</a>
+                            <a className={classNames('nav-link', { active: tab === 3 })} onClick={e => this.changeTab(3)} href="#">Reviews</a>
                         </li>
                     </ul>
                     {this.renderTabPanel(product)}

@@ -1,0 +1,9 @@
+
+
+ 2 ways to handle Forms
+
+
+ -> un-controlled   i.e using 'ref' points
+ -> controlled      i.e onchange , react 
+
+    
