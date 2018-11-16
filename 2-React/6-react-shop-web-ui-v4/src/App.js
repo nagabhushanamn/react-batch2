@@ -15,14 +15,16 @@ class App extends Component {
       products: []
     };
   }
-
+ 
   componentDidMount() {
     let api = 'http://localhost:8080/api/products';
+
     fetch(api)
       .then(response => response.json())
       .then(products => {
         this.setState({ products })
       })
+
   }
 
   addToCart(item, qty) {
@@ -47,11 +49,13 @@ class App extends Component {
     return (
       <div className="container">
         <NavBar title="online-shopping" />
-        <hr />
+
         <Router>
           <div>
+            <hr />
             <CartBadge cart={cart} />
             <hr />
+            
             <ul className="nav nav-pills">
               <li className="nav-item">
                 <Link className="nav-link" to="/products">Products</Link>

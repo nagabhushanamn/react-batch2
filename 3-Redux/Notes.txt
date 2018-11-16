@@ -1,0 +1,63 @@
+
+
+
+
+// step-1 : indentify UI appln's state
+---------------------------------------------------------
+- products
+- reviews
+- cart
+---------------------------------------------------------
+
+
+
+// step-2 : indentify actions which cause state change
+---------------------------------------------------------
+
+- LOAD_PRODUCTS
+- LOAD_REVIEWS
+- ADD_NEW_REVIEW
+- BUY
+
+---------------------------------------------------------
+
+
+// step-3 : create action(s) with type & payload
+---------------------------------------------------------
+
+-e.g
+
+    loadProducts(){
+        //..
+        return {type:'LOAD_PRODUCTS',products}
+    }
+
+---------------------------------------------------------
+
+
+// step-4 : process actions by reducer(s)
+---------------------------------------------------------
+
+-e.g
+
+    productsReducer(state,action){
+        //..
+        return 'new-sate'
+    }
+
+---------------------------------------------------------
+
+
+
+// step-5 : create store using reducer(s)
+---------------------------------------------------------
+
+-e.g
+const store=createStore(reducer)
+
+---------------------------------------------------------
+
+
+
+
+

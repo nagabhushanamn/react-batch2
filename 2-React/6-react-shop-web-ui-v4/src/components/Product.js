@@ -4,6 +4,7 @@ import Review from './Review';
 import ReviewForm from './ReviewForm_v2';
 
 class Product extends Component {
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -11,6 +12,7 @@ class Product extends Component {
             reviews: []
         }
     }
+     
     changeTab(tabIndex) {
         this.setState({ tab: tabIndex }, () => {
             if (tabIndex === 3) {
