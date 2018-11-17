@@ -2,6 +2,8 @@
 
 
 
+
+
 // step-1 : indentify UI appln's state
 ---------------------------------------------------------
 - products
@@ -35,7 +37,7 @@
 ---------------------------------------------------------
 
 
-// step-4 : process actions by reducer(s)
+// step-4 : process actions by reducer(s) to maintain UI state
 ---------------------------------------------------------
 
 -e.g
