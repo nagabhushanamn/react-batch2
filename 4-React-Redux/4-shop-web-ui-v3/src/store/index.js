@@ -11,7 +11,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 let preloadedState = {
     products: [],
     reviews: {},
-    cart: []
+    cart: [],
+    status: {}
 }
 
 let middlewares = [thunk]

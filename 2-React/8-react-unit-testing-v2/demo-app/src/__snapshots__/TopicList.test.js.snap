@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopicList component renders the topics correctly renders correctly 1`] = `
+<div
+  className="panel panel-default"
+>
+  <div
+    className="panel-heading"
+  >
+    All Topics
+  </div>
+  <div
+    className="panel-body"
+  >
+    <div
+      className="list-group col-md-6 col-sm-6"
+    >
+      <div
+        className="list-group-item"
+        onClick={[Function]}
+      >
+        React
+      </div>
+      <div
+        className="list-group-item"
+        onClick={[Function]}
+      >
+        Redux
+      </div>
+      <div
+        className="list-group-item"
+        onClick={[Function]}
+      >
+        JavaScript
+      </div>
+    </div>
+  </div>
+</div>
+`;

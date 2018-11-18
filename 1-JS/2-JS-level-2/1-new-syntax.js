@@ -23,6 +23,127 @@
  */
 
 //-----------------------------------------------
+// 10. generator function
+//-----------------------------------------------
+
+
+
+// function normalFunc() {
+//     console.log('statement -1');
+//     console.log('statement -2');
+//     console.log('statement -3');
+// }
+
+// normalFunc();
+
+
+
+//-----------------------------------------
+
+// function* generatorFunc() {
+//     console.log('started.')
+//     console.log('statement-1');
+//     yield 1;
+//     console.log('statement-2');
+//     yield 2;
+//     console.log('statement-3');
+//     yield 3;
+// }
+
+
+// const it = generatorFunc();
+
+//-----------------------------------------
+
+
+// function* genFunc() {
+//     let i = 0;
+//     while (true) {
+//         yield i;
+//         i++
+//     }
+// }
+
+// let it=genFunc();
+
+
+//-----------------------------------------
+
+
+// function* foo() {
+
+//     let x = yield "please give me a value of x";
+//     console.log(x);
+
+//     let y = yield "please give me a value of y";
+//     console.log(y);
+
+//     let z = yield "please give me a value of z";
+//     console.log(z);
+
+//     return (x + y + z)
+
+// }
+
+
+//-----------------------------------------
+
+
+function getFood1() {
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("idly")
+        }, 3000);
+    });
+    return promise;
+}
+
+
+function getFood2() {
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("sambar")
+        }, 4000);
+    });
+    return promise;
+}
+
+
+function* eat() {
+    console.log('start eating');
+    let food1 = yield getFood1();
+    console.log(food1);
+    let food2 = yield getFood2();
+    console.log(food2);
+    console.log('yummy ' + food1 + " + " + food2)
+}
+
+
+let it = eat();
+it.next()
+  .value.then(food1 => {
+    it.next(food1)
+         .value
+        .then(food2 => it.next(food2))
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----------------------------------------------
 // 9.arrow-function 
 //-----------------------------------------------
 

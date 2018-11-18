@@ -1,0 +1,24 @@
+
+
+
+
+for Javascript unit-testing F.Ws
+---------------------------------
+
+
+- Jasmine
+- Mocha
+- Jest  from facebook
+
+
+
+Testing Utilities
+------------------
+
+ -> enzyme  from airbnb
+
+
+ To test react UI components
+
+
+        => JEST + enzyme
